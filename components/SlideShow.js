@@ -14,7 +14,7 @@ class SlideShow extends React.Component {
     return (
       <View>
         <Text style={{ textAlign: "center", fontSize: 20, paddingTop: 20 }}>
-          This is Slider 1
+          This is Slider
         </Text>
         <View
           style={{

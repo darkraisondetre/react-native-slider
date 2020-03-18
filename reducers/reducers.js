@@ -3,7 +3,7 @@ export default function(state=null, action) {
         case "NEXT_IMAGE_CLICKED":
             return ({
                 currentImageID:
-                  action.payload.currentImageId + 1 > 3
+                  action.payload.currentImageId + 1 > 6
                   ? 1
                   : action.payload.currentImageId + 1
             });
@@ -11,7 +11,7 @@ export default function(state=null, action) {
             return ({
                 currentImageID:
                 action.payload.currentImageId - 1 < 1
-                ? 3
+                ? 6
                 : action.payload.currentImageId - 1
             });
         default:

@@ -41,12 +41,6 @@ class Main extends React.Component {
             flexDirection: "row"
           }}
         >
-      {/* <Tab.Navigator>
-        <Tab.Screen name="Slider" component={Slider} />
-        <Tab.Screen name="Audio" component={AudioButton} />
-        <Tab.Screen name="Q-Digital Link" component={LinkButton} />
-        <Tab.Screen name="Exit" component={Exit} />
-      </Tab.Navigator> */}
           <Slider />
           <AudioButton />
           <LinkButton />
