@@ -39,7 +39,6 @@ target 'reactproj' do
 
 
 
-  pod 'RNSound', :path => '../node_modules/react-native-sound'
 
   target 'reactprojTests' do
     inherit! :search_paths

@@ -19,7 +19,6 @@ import { Provider } from "react-redux";
 import store from "./createStore";
 
 const Stack = createStackNavigator();
-
 const App = () => {
   return (
     <Provider store={store}>

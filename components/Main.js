@@ -1,21 +1,12 @@
 import React from "react";
 import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  ActivityIndicator,
-  FlatList,
-  Button
+  View
 } from "react-native";
-import Screen from "./Screen";
-import AudioButton from "./AudioButton";
 import LinkButton from "./LinkButton";
 import Exit from "./ExitBtn";
-import Slider from "./Slider";
 import SlideShow from "./SlideShow";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import SoundPlayer from "./Sound";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,22 +20,22 @@ class Main extends React.Component {
           alignItems: "center"
         }}
       >
-        <View>
-          <SlideShow />
-        </View>
         <View
           style={{
             width: "100%",
             flex: 1,
-            position: "absolute",
+            position: "relative",
             bottom: 0,
-            flexDirection: "row"
+            flexDirection: "row",
+            alignItems: 'flex-end'
           }}
         >
-          <Slider />
-          <AudioButton />
-          <LinkButton />
-          <Exit />
+            <Tab.Navigator>
+              <Tab.Screen name="Slider" component={SlideShow} />
+              <Tab.Screen name="Sound Player" component={SoundPlayer} />
+              <Tab.Screen name="Q-Digital" component={LinkButton} />
+              <Tab.Screen name="Exit" component={Exit} />
+            </Tab.Navigator>
         </View>
       </View>
     );

@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text, Image, ActivityIndicator, Button, TouchableOpacity } from "react-native";
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import LogIn from "./LogIn";
+import {
+  View,
+  Text,
+  Image,
+  ActivityIndicator,
+  TouchableOpacity
+} from "react-native";
 import InstagramLogin from "react-native-instagram-login";
-import store from "react-native-simple-store";
 
 class Home extends React.Component {
   constructor(props) {
@@ -42,13 +44,15 @@ class Home extends React.Component {
           Log In with Instagram:
         </Text>
         <View>
-          <TouchableOpacity onPress={() => {
-            navigation.navigate('Main')
-            console.log(this.instagramLogin); 
-            }}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Main");
+              console.log(this.instagramLogin);
+            }}
+          >
             <Text style={{ color: "cyan", fontSize: 20 }}>Login</Text>
           </TouchableOpacity>
-            <InstagramLogin
+          <InstagramLogin
             ref={ref => (this.instagramLogin = ref)}
             appId="your-app-id"
             appSecret="your-app-secret"
@@ -57,12 +61,7 @@ class Home extends React.Component {
             onLoginSuccess={this.setIgToken}
             onLoginFailure={data => console.log(data)}
           />
-          
         </View>
-        {/* <Button 
-        title="Log In" 
-        onPress={() => navigation.navigate('Main')} 
-        /> */}
       </View>
     );
   }

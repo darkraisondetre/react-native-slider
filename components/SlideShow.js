@@ -12,16 +12,16 @@ class SlideShow extends React.Component {
   render() {
     let currentImageID = this.props.currentImageID;
     return (
-      <View>
+      <View style={{flex:3}}>
         <Text style={{ textAlign: "center", fontSize: 20, paddingTop: 20 }}>
           This is Slider
         </Text>
         <View
           style={{
-            flex: 2,
+            flex: 3,
             flexDirection: "row",
-            justifyContent: "space-evenly",
-            alignItems: "center"
+            alignItems: "center",
+            justifyContent: 'center'
           }}
         >
           <SliderButtonLeft
