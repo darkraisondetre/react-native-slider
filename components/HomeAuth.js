@@ -46,20 +46,20 @@ class Home extends React.Component {
         <View>
           <TouchableOpacity
             onPress={() => {
+              alert(this.instagramLogin.props.onLoginSuccess);
               navigation.navigate("Main");
-              console.log(this.instagramLogin);
             }}
           >
             <Text style={{ color: "cyan", fontSize: 20 }}>Login</Text>
           </TouchableOpacity>
           <InstagramLogin
             ref={ref => (this.instagramLogin = ref)}
-            appId="your-app-id"
-            appSecret="your-app-secret"
+            appId="263458"
+            appSecret="136421236"
             redirectUrl="https://www.google.com"
             scopes={["user_profile", "user_media"]}
             onLoginSuccess={this.setIgToken}
-            onLoginFailure={data => console.log(data)}
+            onLoginFailure={(data) => console.log(data)}
           />
         </View>
       </View>

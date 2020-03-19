@@ -12,7 +12,7 @@ class SlideShow extends React.Component {
   render() {
     let currentImageID = this.props.currentImageID;
     return (
-      <View style={{flex:3}}>
+      <View style={{ flex: 3 }}>
         <Text style={{ textAlign: "center", fontSize: 20, paddingTop: 20 }}>
           This is Slider
         </Text>
@@ -21,15 +21,19 @@ class SlideShow extends React.Component {
             flex: 3,
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: 'center'
+            justifyContent: "center"
           }}
         >
           <SliderButtonLeft
-            handleClick={() => this.props.prevImage(currentImageID.currentImageID)}
+            handleClick={() =>
+              this.props.prevImage(currentImageID.currentImageID)
+            }
           />
           <SliderScreen currentImageID={currentImageID} />
           <SliderButtonRight
-            handleClick={() => this.props.nextImage(currentImageID.currentImageID)}
+            handleClick={() =>
+              this.props.nextImage(currentImageID.currentImageID)
+            }
           />
         </View>
       </View>

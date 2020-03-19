@@ -11,9 +11,8 @@ class SliderScreen extends React.Component {
       <View>
         <Image
           style={{
-            width: 300,
-            height: 300,
-            alignSelf: "center",
+            width: 320,
+            height: 400,
             marginHorizontal: 10
           }}
           source={this.selectedImage()}
